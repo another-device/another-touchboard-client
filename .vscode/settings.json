@@ -1,0 +1,9 @@
+{
+    "godotTools.editorPath.godot4": "d:\\Steam\\steamapps\\common\\Godot Engine\\godot.windows.opt.tools.64.exe",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "files.exclude": {
+        "**/**.uid": true,
+        "**/**.import": true
+    }
+}

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://r4en3un5m161"]
+
+[ext_resource type="Script" uid="uid://dd4t40guhdfxn" path="res://prefabs/touch_key.gd" id="1_1xlkf"]
+
+[node name="TouchKey" type="Button"]
+offset_right = 300.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 1
+text = "W"
+script = ExtResource("1_1xlkf")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]

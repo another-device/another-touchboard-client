@@ -1,0 +1,321 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4gv1vp16eeuw"]
+
+[ext_resource type="Script" uid="uid://w3i8a0go60us" path="res://scenes/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://r4en3un5m161" path="res://prefabs/touch_key.tscn" id="1_o5qli"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("info")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0wfyh")
+info = NodePath("Label")
+
+[node name="Keyboard" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -580.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBox" type="VBoxContainer" parent="Keyboard"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="123456" type="HBoxContainer" parent="Keyboard/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TouchKey" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "`  ~"
+key_code = 96
+
+[node name="TouchKey14" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "1  !"
+
+[node name="TouchKey2" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "2  @"
+
+[node name="TouchKey3" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "3  #"
+
+[node name="TouchKey4" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "4  $"
+
+[node name="TouchKey5" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "5  %"
+
+[node name="TouchKey6" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "6  ^"
+
+[node name="TouchKey7" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "7  &"
+
+[node name="TouchKey8" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "8  *"
+
+[node name="TouchKey9" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "9  ("
+
+[node name="TouchKey10" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "0  )"
+
+[node name="TouchKey11" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "-  _"
+key_code = 45
+
+[node name="TouchKey12" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "=  +"
+key_code = 61
+
+[node name="TouchKey13" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "BackSpace"
+
+[node name="QWERTY" type="HBoxContainer" parent="Keyboard/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TouchKey" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Tab"
+
+[node name="TouchKey14" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Q"
+
+[node name="TouchKey2" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+
+[node name="TouchKey3" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "E"
+
+[node name="TouchKey4" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "R"
+
+[node name="TouchKey5" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "T"
+
+[node name="TouchKey6" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Y"
+
+[node name="TouchKey7" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "U"
+
+[node name="TouchKey8" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "I"
+
+[node name="TouchKey9" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "O"
+
+[node name="TouchKey10" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "P"
+
+[node name="TouchKey11" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "[  {"
+key_code = 123
+
+[node name="TouchKey12" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "]  }"
+key_code = 125
+
+[node name="TouchKey13" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "\\  |"
+key_code = 92
+
+[node name="ASDFGH" type="HBoxContainer" parent="Keyboard/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TouchKey" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "CapsLock"
+
+[node name="TouchKey13" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "A"
+
+[node name="TouchKey2" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "S"
+
+[node name="TouchKey3" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "D"
+
+[node name="TouchKey4" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "F"
+
+[node name="TouchKey5" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "G"
+
+[node name="TouchKey6" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "H"
+
+[node name="TouchKey7" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "J"
+
+[node name="TouchKey8" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "K"
+
+[node name="TouchKey9" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "L"
+
+[node name="TouchKey10" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = ";  :"
+key_code = 59
+
+[node name="TouchKey11" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "'  \""
+key_code = 39
+
+[node name="TouchKey12" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "     Enter"
+
+[node name="ZXCVB" type="HBoxContainer" parent="Keyboard/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TouchKey" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Shift           "
+
+[node name="TouchKey13" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Z"
+
+[node name="TouchKey2" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "X"
+
+[node name="TouchKey3" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "C"
+
+[node name="TouchKey4" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "V"
+
+[node name="TouchKey5" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "B"
+
+[node name="TouchKey6" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "N"
+
+[node name="TouchKey7" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "M"
+
+[node name="TouchKey8" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = ",  <"
+key_code = 44
+
+[node name="TouchKey9" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = ".  >"
+key_code = 46
+
+[node name="TouchKey10" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "/  ?"
+key_code = 59
+
+[node name="TouchKey11" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+toggle_mode = true
+text = "          Shift"
+
+[node name="SPACE" type="HBoxContainer" parent="Keyboard/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TouchKey" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Ctrl"
+
+[node name="TouchKey13" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Win"
+key_code = 4194327
+
+[node name="TouchKey2" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "Alt"
+
+[node name="TouchKey3" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+text = "                                               Space                                               "
+
+[node name="TouchKey4" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+toggle_mode = true
+text = "Alt"
+
+[node name="TouchKey5" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
+layout_mode = 2
+toggle_mode = true
+text = "Ctrl"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -900.0
+offset_right = 900.0
+offset_bottom = 100.0
+grow_horizontal = 2
+text = "Connecting..."
+horizontal_alignment = 1
+vertical_alignment = 1
