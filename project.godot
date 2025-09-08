@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="AnotherTouchboard"
+config/name="A-Touchboard"
 run/main_scene="uid://c4gv1vp16eeuw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
@@ -29,6 +29,8 @@ window/handheld/orientation=4
 [gui]
 
 theme/custom="uid://c0pfag5yq612q"
+theme/custom_font="uid://clrf1emk0vjbx"
+theme/default_font_hinting=0
 
 [input_devices]
 
@@ -39,3 +41,4 @@ pointing/emulate_mouse_from_touch=false
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.223529, 0.243137, 0.27451, 1)

@@ -7,7 +7,11 @@
 [node name="Client" type="Node"]
 script = ExtResource("1_5f806")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="PollTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="HeartBeat" type="Timer" parent="."]
+wait_time = 30.0
 autostart = true
 
 [node name="Typing" type="AudioStreamPlayer" parent="."]
@@ -18,4 +22,5 @@ stream = ExtResource("3_4tr0r")
 
 [connection signal="connection_status_changed" from="." to="." method="_on_connection_status_changed"]
 [connection signal="server_discovered" from="." to="." method="_on_server_discovered"]
-[connection signal="timeout" from="Timer" to="." method="_on_poll_timer_timeout"]
+[connection signal="timeout" from="PollTimer" to="." method="_on_poll_timer_timeout"]
+[connection signal="timeout" from="HeartBeat" to="." method="_on_heart_beat_timeout"]

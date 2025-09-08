@@ -113,6 +113,10 @@ func send_key_event(key_code: String, is_pressed: bool):
 	var message: String = "%s,%s" % [key_code, str(is_pressed).to_lower()]
 	tcp.put_data(message.to_utf8_buffer())
 
+func send_heartbeat():
+	if is_server_connected:
+		tcp.put_data("<3".to_utf8_buffer())
+
 func _exit_tree():
 	disconnect_from_server()
 	udp.close()
@@ -174,3 +178,7 @@ func release_key(key_code: int) -> void:
 	print_debug("Release key: %d <%s>" % [get_keycode(key_code), OS.get_keycode_string(key_code)])
 	Client.send_key_event(str(get_keycode(key_code)), false)
 	$Releasing.play()
+
+
+func _on_heart_beat_timeout() -> void:
+	Client.send_heartbeat()
