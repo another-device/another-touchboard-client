@@ -35,12 +35,13 @@ func _on_button_up() -> void:
 		return
 	Client.release_key(key_code)
 
+
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
 		print_debug("Touch event: %s" % [str(event)])
 		if event.is_pressed():
 			if real_toggle_mode:
-				button_pressed = not button_pressed
+				set_pressed_no_signal(not button_pressed)
 				toggled.emit(button_pressed)
 			else:
 				button_pressed = true

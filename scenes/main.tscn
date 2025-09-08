@@ -23,19 +23,19 @@ offset_top = -580.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
+theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
 [node name="VBox" type="VBoxContainer" parent="Keyboard"]
 layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 1
+theme_override_constants/separation = 10
+alignment = 2
 
 [node name="123456" type="HBoxContainer" parent="Keyboard/VBox"]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
 layout_mode = 2
@@ -97,9 +97,9 @@ layout_mode = 2
 text = "BackSpace"
 
 [node name="QWERTY" type="HBoxContainer" parent="Keyboard/VBox"]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
 layout_mode = 2
@@ -160,9 +160,9 @@ text = "\\  |"
 key_code = 92
 
 [node name="ASDFGH" type="HBoxContainer" parent="Keyboard/VBox"]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
 layout_mode = 2
@@ -219,13 +219,13 @@ layout_mode = 2
 text = "     Enter"
 
 [node name="ZXCVB" type="HBoxContainer" parent="Keyboard/VBox"]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
-text = "Shift           "
+text = "Shift                "
 
 [node name="TouchKey13" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
@@ -273,12 +273,12 @@ key_code = 59
 [node name="TouchKey11" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
 toggle_mode = true
-text = "          Shift"
+text = "               Shift"
 
 [node name="SPACE" type="HBoxContainer" parent="Keyboard/VBox"]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
@@ -295,7 +295,7 @@ text = "Alt"
 
 [node name="TouchKey3" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
-text = "                                               Space                                               "
+text = "                                                                                    Space                                                                                    "
 
 [node name="TouchKey4" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2

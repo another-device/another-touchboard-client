@@ -1,8 +1,7 @@
 extends Node
 
 # 网络相关配置
-const BROADCAST_PORT := 8889 # 与PC端广播端口一致
-const SERVER_PORT := 8888 # PC端TCP服务端口
+const BROADCAST_PORT := 47126 # 与PC端广播端口一致
 
 # 网络对象
 var udp := PacketPeerUDP.new()
@@ -32,7 +31,7 @@ func _process(_delta: float):
 		
 		var message = packet.get_string_from_utf8()
 		# 验证是否是PC服务器的广播消息（格式：AnotherTouchboardServer;IP;端口）
-		if message.begins_with("AnotherTouchboardServer;"):
+		if message.begins_with("a-touchboard-server;"):
 			var parts = message.split(";")
 			if parts.size() == 3:
 				var server_info = {
@@ -54,7 +53,7 @@ func _process(_delta: float):
 					server_discovered.emit(discovered_servers[0])
 
 # 连接到指定服务器
-func connect_to_server(server_ip: String, server_port: int = SERVER_PORT):
+func connect_to_server(server_ip: String, server_port: int):
 	if is_server_connected:
 		disconnect_from_server()
 	
@@ -110,9 +109,10 @@ func send_key_event(key_code: String, is_pressed: bool):
 		connection_status_changed.emit(false, "未连接，无法发送按键")
 		return
 	
-	var message: String = "%s,%s" % [key_code, str(is_pressed).to_lower()]
+	var message: String = "%s,%d" % [key_code, 1 if is_pressed else 0]
 	tcp.put_data(message.to_utf8_buffer())
 
+# 发送心跳包
 func send_heartbeat():
 	if is_server_connected:
 		tcp.put_data("<3".to_utf8_buffer())
