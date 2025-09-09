@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4gv1vp16eeuw"]
+[gd_scene load_steps=5 format=3 uid="uid://c4gv1vp16eeuw"]
 
 [ext_resource type="Script" uid="uid://w3i8a0go60us" path="res://scenes/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://r4en3un5m161" path="res://prefabs/touch_key.tscn" id="1_o5qli"]
+[ext_resource type="Theme" uid="uid://c0pfag5yq612q" path="res://themes/function_button.tres" id="3_jyhfs"]
+[ext_resource type="Theme" uid="uid://dmqxbxq3vlmj5" path="res://themes/toggle_button.tres" id="4_tbgi4"]
 
 [node name="Main" type="Control" node_paths=PackedStringArray("info")]
 layout_mode = 3
@@ -94,6 +96,7 @@ key_code = 61
 
 [node name="TouchKey13" parent="Keyboard/VBox/123456" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "BackSpace"
 
 [node name="QWERTY" type="HBoxContainer" parent="Keyboard/VBox"]
@@ -103,6 +106,7 @@ theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "Tab"
 
 [node name="TouchKey14" parent="Keyboard/VBox/QWERTY" instance=ExtResource("1_o5qli")]
@@ -166,6 +170,7 @@ theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "CapsLock"
 
 [node name="TouchKey13" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
@@ -216,6 +221,7 @@ key_code = 39
 
 [node name="TouchKey12" parent="Keyboard/VBox/ASDFGH" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "     Enter"
 
 [node name="ZXCVB" type="HBoxContainer" parent="Keyboard/VBox"]
@@ -225,6 +231,7 @@ theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "Shift                "
 
 [node name="TouchKey13" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
@@ -272,6 +279,7 @@ key_code = 59
 
 [node name="TouchKey11" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("4_tbgi4")
 toggle_mode = true
 text = "               Shift"
 
@@ -282,28 +290,34 @@ theme_override_constants/separation = 15
 
 [node name="TouchKey" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "Ctrl"
 
 [node name="TouchKey13" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "Win"
 key_code = 4194327
 
 [node name="TouchKey2" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "Alt"
 
 [node name="TouchKey3" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("3_jyhfs")
 text = "                                                                                    Space                                                                                    "
 
 [node name="TouchKey4" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("4_tbgi4")
 toggle_mode = true
 text = "Alt"
 
 [node name="TouchKey5" parent="Keyboard/VBox/SPACE" instance=ExtResource("1_o5qli")]
 layout_mode = 2
+theme = ExtResource("4_tbgi4")
 toggle_mode = true
 text = "Ctrl"
 

@@ -150,6 +150,7 @@ const KEYCODE_DICT: Dictionary[Key, int] = {
 	KEY_META: 91,
 
 	# 符号键
+	KEY_QUOTELEFT: 192,
 	KEY_COMMA: 188,
 	KEY_PERIOD: 110,
 	KEY_SLASH: 191,
