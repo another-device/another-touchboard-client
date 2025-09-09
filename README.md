@@ -1,5 +1,7 @@
 # Another Touchboard Client
 
+![DEMO](demo.gif)
+
 Turn your touch device into a virtual keyboard for your computer.
 
 ## Introduction
