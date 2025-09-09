@@ -109,7 +109,7 @@ func send_key_event(key_code: String, is_pressed: bool):
 		connection_status_changed.emit(false, "未连接，无法发送按键")
 		return
 	
-	var message: String = "%s,%d" % [key_code, 1 if is_pressed else 0]
+	var message: String = "%s,%d/" % [key_code, 1 if is_pressed else 0]
 	tcp.put_data(message.to_utf8_buffer())
 
 # 发送心跳包
