@@ -14,6 +14,7 @@ config/name="A-Touchboard"
 config/version="0.1.0"
 run/main_scene="uid://c4gv1vp16eeuw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="uid://ck8yiqquitu3p"
 
 [autoload]
 

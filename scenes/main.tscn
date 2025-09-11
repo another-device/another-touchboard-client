@@ -275,7 +275,7 @@ key_code = 46
 [node name="TouchKey10" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
 text = "/  ?"
-key_code = 59
+key_code = 47
 
 [node name="TouchKey11" parent="Keyboard/VBox/ZXCVB" instance=ExtResource("1_o5qli")]
 layout_mode = 2
